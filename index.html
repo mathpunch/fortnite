@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnite Username Symbols</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .symbol-container {
+            display: inline-block;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .symbol {
+            font-size: 48px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .copy-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .copy-btn:active {
+            background-color: #0056b3;
+        }
+        .copy-message {
+            margin-top: 10px;
+            font-size: 14px;
+            color: green;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Special Symbols for Fortnite Usernames</h1>
+    <p>Click the button below each symbol to copy it!</p>
+
+    <div class="symbol-container">
+        <span class="symbol">ツ</span>
+        <button class="copy-btn" onclick="copySymbol('ツ', this)">Copy</button>
+        <div class="copy-message">Copied!</div>
+    </div>
+
+    <script>
+        function copySymbol(symbol, button) {
+            navigator.clipboard.writeText(symbol).then(() => {
+                // Show confirmation message
+                const message = button.nextElementSibling;
+                message.style.display = 'block';
+                
+                // Hide the message after 2 seconds
+                setTimeout(() => {
+                    message.style.display = 'none';
+                }, 2000);
+            }).catch(() => {
+                alert('Failed to copy symbol');
+            });
+        }
+    </script>
+
+</body>
+</html>

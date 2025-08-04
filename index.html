@@ -4,47 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fortnite Symbols 1.0</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', Arial, sans-serif;
             text-align: center;
-            padding: 20px;
-            background-color: #f0f0f0;
+            padding: 32px;
+            background: linear-gradient(135deg, #f0f2f8 0%, #e9ecef 100%);
+            color: #1a1a1a;
         }
         h1 {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            font-size: 2.5rem;
+            letter-spacing: -1px;
+        }
+        p {
+            margin-bottom: 32px;
+            color: #555;
+        }
+        .symbols-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
         }
         .symbol-container {
-            display: inline-block;
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px 0 rgba(44,62,80,0.07), 0 1.5px 8px 0 rgba(44,62,80,0.05);
+            padding: 32px 20px 22px 20px;
+            transition: transform 0.16s, box-shadow 0.16s;
+            position: relative;
+        }
+        .symbol-container:hover, .symbol-container:focus-within {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 8px 32px 0 rgba(44,62,80,0.13), 0 3px 12px 0 rgba(44,62,80,0.09);
         }
         .symbol {
-            font-size: 48px;
-            margin-bottom: 10px;
+            font-size: 3.25rem;
+            margin-bottom: 12px;
             display: block;
+            font-weight: 600;
+            color: #2c3e50;
+            letter-spacing: 2px;
+            user-select: all;
         }
         .copy-btn {
-            background-color: #007bff;
+            background: linear-gradient(90deg, #007bff 60%, #43a7fd 100%);
             color: #fff;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 10px 22px;
+            border-radius: 6px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background 0.18s, box-shadow 0.18s;
+            box-shadow: 0 2px 4px rgba(67,167,253,0.09);
         }
-        .copy-btn:active {
-            background-color: #0056b3;
+        .copy-btn:hover, .copy-btn:focus {
+            background: linear-gradient(90deg, #0056b3 60%, #007bff 100%);
+            outline: none;
         }
         .copy-message {
-            margin-top: 10px;
-            font-size: 14px;
-            color: green;
+            margin-top: 12px;
+            font-size: 0.96rem;
+            color: #06c270;
+            background: #e7faee;
+            padding: 2px 10px;
+            border-radius: 4px;
             display: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 8px;
+            z-index: 2;
+            box-shadow: 0 1px 5px rgba(44,62,80,0.07);
+        }
+        @media (max-width: 600px) {
+            .symbols-grid {
+                gap: 13px;
+            }
+            .symbol-container {
+                padding: 20px 6px 18px 6px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -53,100 +100,111 @@
     <h1>Fortnite Symbols 1.0</h1>
     <p>Click the button below each symbol to copy it!</p>
 
-    <div class="symbol-container">
-        <span class="symbol">ツ</span>
-        <button class="copy-btn" onclick="copySymbol('ツ', this)">Copy</button>
-        <div class="copy-message">Copied!</div>
-    </div>
+    <div class="symbols-grid">
+        <div class="symbol-container">
+            <span class="symbol">ツ</span>
+            <button class="copy-btn" onclick="copySymbol('ツ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">ノ</span>
+            <button class="copy-btn" onclick="copySymbol('ノ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">ヽ</span>
+            <button class="copy-btn" onclick="copySymbol('ヽ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">シ</span>
+            <button class="copy-btn" onclick="copySymbol('シ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">ソ</span>
+            <button class="copy-btn" onclick="copySymbol('ソ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">リ</span>
+            <button class="copy-btn" onclick="copySymbol('リ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">ン</span>
+            <button class="copy-btn" onclick="copySymbol('ン', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">ハ</span>
+            <button class="copy-btn" onclick="copySymbol('ハ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">ケ</span>
+            <button class="copy-btn" onclick="copySymbol('ケ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">ヌ</span>
+            <button class="copy-btn" onclick="copySymbol('ヌ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">メ</span>
+            <button class="copy-btn" onclick="copySymbol('メ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">ル</span>
+            <button class="copy-btn" onclick="copySymbol('ル', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">ワ</span>
+            <button class="copy-btn" onclick="copySymbol('ワ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">レ</span>
+            <button class="copy-btn" onclick="copySymbol('レ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">ゥ</span>
+            <button class="copy-btn" onclick="copySymbol('ゥ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">╮</span>
+            <button class="copy-btn" onclick="copySymbol('╮', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
 
-    <div class="symbol-container">
-        <span class="symbol">ノ</span>
-        <button class="copy-btn" onclick="copySymbol('ノ', this)">Copy</button>
-        <div class="copy-message">Copied!</div>
-    </div>
+        <!-- New Symbols -->
+        <div class="symbol-container">
+            <span class="symbol">ㅿ</span>
+            <button class="copy-btn" onclick="copySymbol('ㅿ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">ㄷ</span>
+            <button class="copy-btn" onclick="copySymbol('ㄷ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">ㅇ</span>
+            <button class="copy-btn" onclick="copySymbol('ㄷㅇ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <div class="symbol-container">
+            <span class="symbol">ㄹ</span>
+            <button class="copy-btn" onclick="copySymbol('ㄹ', this)">Copy</button>
+            <div class="copy-message">Copied!</div>
+        </div>
+        <!-- End new symbols -->
 
-    <div class="symbol-container">
-        <span class="symbol">ヽ</span>
-        <button class="copy-btn" onclick="copySymbol('ヽ', this)">Copy</button>
-        <div class="copy-message">Copied!</div>
-    </div>
-
-    <div class="symbol-container">
-        <span class="symbol">シ</span>
-        <button class="copy-btn" onclick="copySymbol('シ', this)">Copy</button>
-        <div class="copy-message">Copied!</div>
-    </div>
-
-    <div class="symbol-container">
-        <span class="symbol">ソ</span>
-        <button class="copy-btn" onclick="copySymbol('ソ', this)">Copy</button>
-        <div class="copy-message">Copied!</div>
-    </div>
-
-    <div class="symbol-container">
-        <span class="symbol">リ</span>
-        <button class="copy-btn" onclick="copySymbol('リ', this)">Copy</button>
-        <div class="copy-message">Copied!</div>
-    </div>
-
-    <div class="symbol-container">
-        <span class="symbol">ン</span>
-        <button class="copy-btn" onclick="copySymbol('ン', this)">Copy</button>
-        <div class="copy-message">Copied!</div>
-    </div>
-
-    <div class="symbol-container">
-        <span class="symbol">ハ</span>
-        <button class="copy-btn" onclick="copySymbol('ハ', this)">Copy</button>
-        <div class="copy-message">Copied!</div>
-    </div>
-
-    <div class="symbol-container">
-        <span class="symbol">ケ</span>
-        <button class="copy-btn" onclick="copySymbol('ケ', this)">Copy</button>
-        <div class="copy-message">Copied!</div>
-    </div>
-
-    <div class="symbol-container">
-        <span class="symbol">ヌ</span>
-        <button class="copy-btn" onclick="copySymbol('ヌ', this)">Copy</button>
-        <div class="copy-message">Copied!</div>
-    </div>
-
-    <div class="symbol-container">
-        <span class="symbol">メ</span>
-        <button class="copy-btn" onclick="copySymbol('メ', this)">Copy</button>
-        <div class="copy-message">Copied!</div>
-    </div>
-
-    <div class="symbol-container">
-        <span class="symbol">ル</span>
-        <button class="copy-btn" onclick="copySymbol('ル', this)">Copy</button>
-        <div class="copy-message">Copied!</div>
-    </div>
-
-    <div class="symbol-container">
-        <span class="symbol">ワ</span>
-        <button class="copy-btn" onclick="copySymbol('ワ', this)">Copy</button>
-        <div class="copy-message">Copied!</div>
-    </div>
-
-    <div class="symbol-container">
-        <span class="symbol">レ</span>
-        <button class="copy-btn" onclick="copySymbol('レ', this)">Copy</button>
-        <div class="copy-message">Copied!</div>
-    </div>
-
-    <div class="symbol-container">
-        <span class="symbol">ゥ</span>
-        <button class="copy-btn" onclick="copySymbol('ゥ', this)">Copy</button>
-        <div class="copy-message">Copied!</div>
-    </div>
-
-    <div class="symbol-container">
-        <span class="symbol">╮</span>
-        <button class="copy-btn" onclick="copySymbol('╮', this)">Copy</button>
-        <div class="copy-message">Copied!</div>
     </div>
 
     <script>
@@ -156,10 +214,10 @@
                 const message = button.nextElementSibling;
                 message.style.display = 'block';
                 
-                // Hide the message after 2 seconds
+                // Hide the message after 1.5 seconds
                 setTimeout(() => {
                     message.style.display = 'none';
-                }, 2000);
+                }, 1500);
             }).catch(() => {
                 alert('Failed to copy symbol');
             });
